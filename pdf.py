@@ -70,7 +70,6 @@ def generatePDFHeader(report_name, store_name):
 
     # Crear una tabla para el logo y la información de la tienda
     data = [
-        # ['',Image('logo.assets.jpg', width=25, height=25), 'Report:', report_name,'        ','                ','                ','                ','                ','                ', '                ', '                ', 'Store:', store_name],
         [Image('logo.assets.jpg', width=25, height=25), f"Report:{report_name}", f"Store: {store_name}"]
     ]
 
@@ -87,7 +86,6 @@ def generatePDFHeader(report_name, store_name):
     header_table.hAlign = 'LEFT'  # Alinear el contenido de la tabla hacia la izquierda
     elements.append(Indenter(left=-50))
     elements.append(header_table)
-    # Crear un espacio (Spacer) para separar el encabezado del contenido principal
 
     return elements
 
