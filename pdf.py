@@ -212,13 +212,12 @@ def generateBySomethingReport(pdf_name, data, total, header_elements):
         table = Table(item['transactions'], colWidths=[pdf.width / len(item['transactions'][0])]*len(item['transactions'][0]))
         
         table_style = TableStyle([
-            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#D63864')),  # Fondo de la primera fila
-            ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),  # Color del texto en la primera fila
-            ('ALIGN', (0, 0), (-1, -1), 'RIGHT'),  # Alinear el contenido al centro
+            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#D63864')),  
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+            ('ALIGN', (0, 0), (-1, -1), 'RIGHT'),
         ])
 
         table.setStyle(table_style)
-
         elements.append(table)
 
     # Estilo de la tabla de totales
